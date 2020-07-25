@@ -1,0 +1,22 @@
+<div *ngIf="auth.user$ | async; then authenticated; else guest">
+  <!-- template will replace this div -->
+</div>
+<div *ngIf="loading">Loading...</div>
+<!-- User NOT logged in -->
+<ng-template #guest>
+  <div *ngIf="!loading">
+    <h3>Please login</h3>
+
+    <button (click)="auth.googleSignin()">
+      <i class="fa fa-google"></i> Google Login
+    </button>
+  </div>
+</ng-template>
+
+<!-- User logged in -->
+<ng-template #authenticated>
+  <button (click)="auth.signOut()">
+    <i class="fa fa-google"></i> Google Sign Out
+  </button>
+</ng-template>
+<router-outlet></router-outlet>
