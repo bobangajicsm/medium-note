@@ -22,6 +22,7 @@
     "@angular/router": "~8.2.0",
     "angular-medium-editor": "^4.0.0-alpha",
     "firebase": ">= 5.5.7 <8",
+    "mathjax": "^3.0.5",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
